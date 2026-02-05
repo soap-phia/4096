@@ -180,10 +180,10 @@ document.addEventListener("DOMContentLoaded", () => {
         generate()
     }
 
-    //check for the number 2048 in the squares to win
+    //check for the number 4096 in the squares to win
     function checkForWin() {
         for (let i = 0; i < squares.length; i++) {
-            if (squares[i].innerHTML == 2048) {
+            if (squares[i].innerHTML == 4096) {
                 resultDisplay.innerHTML = "You WIN!"
                 document.removeEventListener("keydown", control)
                 setTimeout(clear, 3000)
@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (squares[i].innerHTML == 512) squares[i].style.backgroundColor = "#76daff"
             else if (squares[i].innerHTML == 1024) squares[i].style.backgroundColor = "#beeaa5"
             else if (squares[i].innerHTML == 2048) squares[i].style.backgroundColor = "#d7d4f0"
+            else if (squares[i].innerHTML == 4096) squares[i].style.backgroundColor = "#674096"
         }
     }
     addColours()
